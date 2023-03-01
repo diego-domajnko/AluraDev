@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraDev</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/styles/cabecalho.css">
+  <link rel="stylesheet" href="./assets/styles/editor.css">
+  <link rel="stylesheet" href="./assets/styles/form.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img src="./assets/img/logo.svg" alt="AluraDev" class="nav__logo">
+    <nav class="cabecalho__nav">
+      <div class="nav__buscar">
+        <input type="search" class="hidden">
+        <i class="fa-solid fa-magnifying-glass icone-btn"></i>
+      </div>
+      <ul class="nav__menu">
+        <i class="fa-solid fa-bars icone-btn"></i>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section class="editor">
+      <div class="editor__caixa">
+        <div class="editor__conteudo">
+          <div class="editor__cabecalho">
+            <div class="botao__janela"></div>
+            <div class="botao__janela"></div>
+            <div class="botao__janela"></div>
+          </div>
+          <textarea class="editor__codigo codigo">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</textarea>
+        </div>
+      </div>
+      <a href="#" class="btn">Visualizar com o highlight</a>
+    </section>
+
+    <form class="form" method="post">
+      <div class="form__caixa">
+        <h2 class="side-bar">Seu projeto</h2>
+        <input type="text" class="input-text" placeholder="Nome do seu projeto" aria-label="Nome do seu projeto">
+        <textarea class="input-text" placeholder="Descrição do seu projeto" aria-label="Descrição do seu projeto"></textarea>
+      </div>
+      <div class="form__caixa">
+        <h2 class="side-bar">Personalização</h2>
+        <select class="select">
+          <option value="op1">JavaScript</option>
+          <option value="op2">CSS</option>
+          <option value="op3">HTML</option>
+        </select>
+        <div class="highlight">
+          <div class="highlight__conteudo"></div>
+        </div>
+      </div>
+      <button type="submit" class="btn-preenchido">Salvar projeto</button>
+    </form>
+  </main>
+</body>
+
+</html>

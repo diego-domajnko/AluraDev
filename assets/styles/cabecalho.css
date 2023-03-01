@@ -1,0 +1,40 @@
+.cabecalho,
+.cabecalho__nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho {
+  padding: 0.25rem 0;
+}
+
+.nav__logo {
+  width: 145px;
+}
+
+.cabecalho__nav {
+  gap: 8px;
+}
+
+
+@media (min-width: 768px) {
+  .cabecalho {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 40px;
+  }
+
+  .cabecalho__nav {
+    gap: 40px;
+    justify-content: flex-end;
+  }
+
+  .nav__buscar input {
+    display: inline-block;
+  }
+
+  .nav__buscar .icone-btn {
+    display: none;
+  }
+}

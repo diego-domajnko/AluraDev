@@ -1,0 +1,52 @@
+.editor {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.editor__caixa {
+  background-color: #6BD1FF;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.editor__conteudo {
+  background-color: var(--fundo-codigo);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 1rem;
+}
+
+.editor__cabecalho {
+  display: flex;
+  gap: 8px;
+}
+
+.botao__janela {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+
+.botao__janela:nth-child(1) {
+  background-color: #FF5F56;
+}
+
+.botao__janela:nth-child(2) {
+  background-color: #FFBD2E;
+}
+
+.botao__janela:nth-child(3) {
+  background-color: #27C93F;
+}
+
+.editor__codigo {
+  background-color: transparent;
+  min-height: 428px;
+  outline: none;
+  resize: none;
+}
