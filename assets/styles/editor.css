@@ -46,7 +46,7 @@
 
 .editor__codigo {
   background-color: transparent;
-  min-height: 428px;
+  height: 400px;
   outline: none;
   resize: none;
 }

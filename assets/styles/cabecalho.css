@@ -9,6 +9,10 @@
   padding: 0.25rem 0;
 }
 
+.cabecalho__nav {
+  position: relative;
+}
+
 .nav__logo {
   width: 145px;
 }
@@ -19,22 +23,48 @@
 
 
 @media (min-width: 768px) {
-  .cabecalho {
+  .cabecalho,
+  .cabecalho__nav {
     display: grid;
-    grid-template-columns: 25% 1fr;
     gap: 40px;
+  }
+  
+  .cabecalho {
+    grid-template-columns: 1fr minmax(431px, calc(100vw - 2rem - 145px - 48px));
+    padding: 0;
   }
 
   .cabecalho__nav {
-    gap: 40px;
-    justify-content: flex-end;
+    grid-template-columns: minmax(431px, calc(100vw - 2rem - 145px - 48px)) 1fr;
   }
 
-  .nav__buscar input {
-    display: inline-block;
+  .input-search {
+    display: block;
+    height: 56px;
   }
 
   .nav__buscar .icone-btn {
     display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cabecalho {
+    grid-template-columns: 25% 1fr;
+  }
+
+  .cabecalho__nav {
+    grid-template-columns: 1fr calc((100vw - 4rem) * 0.25);
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__perfil {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-self: flex-end;
   }
 }

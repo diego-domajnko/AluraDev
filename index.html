@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./assets/styles/reset.css">
   <link rel="stylesheet" href="./assets/styles/style.css">
   <link rel="stylesheet" href="./assets/styles/cabecalho.css">
+  <link rel="stylesheet" href="./assets/styles/menu.css">
   <link rel="stylesheet" href="./assets/styles/editor.css">
   <link rel="stylesheet" href="./assets/styles/form.css">
 </head>
@@ -24,16 +25,45 @@
     <img src="./assets/img/logo.svg" alt="AluraDev" class="nav__logo">
     <nav class="cabecalho__nav">
       <div class="nav__buscar">
-        <input type="search" class="hidden">
+        <input type="search" class="input input-search hidden" placeholder="Busque por algo" aria-label="Busque por algo">
         <i class="fa-solid fa-magnifying-glass icone-btn"></i>
       </div>
-      <ul class="nav__menu">
+      <div class="nav__menu">
         <i class="fa-solid fa-bars icone-btn"></i>
+        <i class="fa-solid fa-xmark icone-btn hidden"></i>
+      </div>
+      <ul class="nav__lista hidden">
+        <li class="menu__item menu__item--ativo">
+          <a href="#" class="menu__link">Editor de código</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Comunidade</a>
+        </li>
+        <div class="menu__perfil">
+          <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+          <span class="perfil__nome">Harry</span>
+        </div>
       </ul>
+      <div class="nav__perfil hidden">
+        <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+        <span class="perfil__nome">Harry</span>
+      </div>
     </nav>
   </header>
 
   <main class="conteudo">
+    <section class="menu hidden">
+      <span class="side-bar">Menu</span>
+      <ul class="menu__lista">
+        <li class="menu__item menu__item--ativo">
+          <a href="#" class="menu__link">Editor de código</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Comunidade</a>
+        </li>
+      </ul>
+    </section>
+
     <section class="editor">
       <div class="editor__caixa">
         <div class="editor__conteudo">
@@ -61,8 +91,8 @@ const unfold = (f, seed) => {
     <form class="form" method="post">
       <div class="form__caixa">
         <h2 class="side-bar">Seu projeto</h2>
-        <input type="text" class="input-text" placeholder="Nome do seu projeto" aria-label="Nome do seu projeto">
-        <textarea class="input-text" placeholder="Descrição do seu projeto" aria-label="Descrição do seu projeto"></textarea>
+        <input type="text" class="input" placeholder="Nome do seu projeto" aria-label="Nome do seu projeto">
+        <textarea class="input" placeholder="Descrição do seu projeto" aria-label="Descrição do seu projeto"></textarea>
       </div>
       <div class="form__caixa">
         <h2 class="side-bar">Personalização</h2>
@@ -78,6 +108,8 @@ const unfold = (f, seed) => {
       <button type="submit" class="btn-preenchido">Salvar projeto</button>
     </form>
   </main>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
