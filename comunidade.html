@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraDev</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/styles/cabecalho.css">
+  <link rel="stylesheet" href="./assets/styles/menu.css">
+  <link rel="stylesheet" href="./assets/styles/editor.css">
+  <link rel="stylesheet" href="./assets/styles/form.css">
+  <link rel="stylesheet" href="./assets/styles/codigosEditados.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img src="./assets/img/logo.svg" alt="AluraDev" class="nav__logo">
+    <nav class="cabecalho__nav">
+      <div class="nav__buscar">
+        <input type="search" class="input input-search hidden" placeholder="Busque por algo" aria-label="Busque por algo">
+        <i class="fa-solid fa-magnifying-glass icone-btn"></i>
+      </div>
+      <div class="nav__menu">
+        <i class="fa-solid fa-bars icone-btn"></i>
+        <i class="fa-solid fa-xmark icone-btn hidden"></i>
+      </div>
+      <ul class="nav__lista hidden">
+        <li class="menu__item">
+          <a href="index.html" class="menu__link">Editor de código</a>
+        </li>
+        <li class="menu__item menu__item--ativo">
+          <a href="comunidade.html" class="menu__link">Comunidade</a>
+        </li>
+        <div class="menu__perfil">
+          <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+          <span class="perfil__nome">Harry</span>
+        </div>
+      </ul>
+      <div class="nav__perfil hidden">
+        <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+        <span class="perfil__nome">Harry</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="conteudo codigos-salvos">
+    <section class="menu hidden">
+      <span class="side-bar">Menu</span>
+      <ul class="menu__lista">
+        <li class="menu__item">
+          <a href="index.html" class="menu__link">Editor de código</a>
+        </li>
+        <li class="menu__item menu__item--ativo">
+          <a href="comunidade.html" class="menu__link">Comunidade</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="editor codigos-editados">
+      <div class="codigos-editados__caixa">
+        <div class="editor__caixa">
+          <div class="editor__conteudo">
+            <div class="editor__cabecalho">
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+            </div>
+            <textarea class="editor__codigo codigo">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</textarea>
+          </div>
+        </div>
+        <div class="codigos-editados__conteudo">
+          <h2 class="title">Titulo do Projeto</h2>
+          <p class="descricao-projeto">Essa é a descrição do meu projeto.</p>
+          <div class="interacoes">
+            <div class="interacoes__icones">
+              <i class="comentar interacao">9</i>
+              <i class="curtir interacao">9</i>
+            </div>
+            <div class="interacoes__perfil">
+              <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+              <span class="perfil__nome">&#64;Harry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editor codigos-editados">
+      <div class="codigos-editados__caixa">
+        <div class="editor__caixa">
+          <div class="editor__conteudo">
+            <div class="editor__cabecalho">
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+            </div>
+            <textarea class="editor__codigo codigo">@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #18181c;
+  display: flex;
+  align-items: center;</textarea>
+          </div>
+        </div>
+        <div class="codigos-editados__conteudo">
+          <h2 class="title">Titulo do Projeto</h2>
+          <p class="descricao-projeto">Essa é a descrição do meu projeto.</p>
+          <div class="interacoes">
+            <div class="interacoes__icones">
+              <i class="comentar interacao">9</i>
+              <i class="curtir interacao">9</i>
+            </div>
+            <div class="interacoes__perfil">
+              <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+              <span class="perfil__nome">&#64;Harry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editor codigos-editados">
+      <div class="codigos-editados__caixa">
+        <div class="editor__caixa">
+          <div class="editor__conteudo">
+            <div class="editor__cabecalho">
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+              <div class="botao__janela"></div>
+            </div>
+            <textarea class="editor__codigo codigo">let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
+
+// LANDSCAPE / PORTRAIT
+
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;</textarea>
+          </div>
+        </div>
+        <div class="codigos-editados__conteudo">
+          <h2 class="title">Titulo do Projeto</h2>
+          <p class="descricao-projeto">Essa é a descrição do meu projeto.</p>
+          <div class="interacoes">
+            <div class="interacoes__icones">
+              <i class="comentar interacao">9</i>
+              <i class="curtir interacao">9</i>
+            </div>
+            <div class="interacoes__perfil">
+              <img src="./assets/img/img-perfil.jpg" alt="Foto de perfil do usuário Harry" class="perfil__img">
+              <span class="perfil__nome">&#64;Harry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

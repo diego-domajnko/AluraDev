@@ -1,0 +1,70 @@
+.codigos-editados__caixa {
+  background-color: rgba(0, 0, 0, .16);
+  border-radius: 8px;
+}
+
+.codigos-editados .editor__caixa {
+  padding: 1.5rem;
+}
+
+.codigos-editados .editor__conteudo {
+  padding: 0.75rem;
+  gap: 0.75rem;
+}
+
+.codigos-editados .editor__codigo {
+  height: 350px;
+}
+
+.codigos-editados__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1.5rem;
+}
+
+.descricao-projeto {
+  opacity: 0.8;
+}
+
+.interacoes {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.interacao {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.interacao::before {
+  margin-right: 0.75rem;
+}
+
+.comentar::before{
+  content: '\f075';
+}
+
+.curtir::before {
+  content: '\f004';
+}
+
+.interacoes__perfil {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+
+
+@media (min-width: 1440px) {
+  .codigos-salvos {
+    grid-template-columns: 25% repeat(2, 1fr);
+  }
+
+  .codigos-editados:nth-child(2n) {
+    grid-column: 2/3;
+  }
+}
